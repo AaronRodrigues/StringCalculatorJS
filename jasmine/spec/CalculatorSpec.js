@@ -22,11 +22,12 @@ describe("String Calculator",  function(){
     // creates a random array
     randomArray = (length, max) => [...new Array(length)]
     .map(() => Math.round(Math.random() * max));
-    randy = Math.floor((Math.random() * 10) + 1);
+    // creates a random number between 1 and 100
+    randy = Math.floor((Math.random() * 100) + 1);
     res = randomArray(randy,randy);
-    //sums up an array
+    // sums up an array
     sum = res.reduce((pv, cv) => pv+cv, 0);
-    //converts the array to a string
+    // converts the array to a string
     arg = res.join();
     expect(calculator.add(arg)).toEqual(sum);
   })
