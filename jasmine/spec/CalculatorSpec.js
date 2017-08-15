@@ -22,7 +22,8 @@ describe("String Calculator",  function(){
     // creates a random array
     randomArray = (length, max) => [...new Array(length)]
     .map(() => Math.round(Math.random() * max));
-    res = randomArray(10,9);
+    randy = Math.floor((Math.random() * 10) + 1);
+    res = randomArray(randy,randy);
     //sums up an array
     sum = res.reduce((pv, cv) => pv+cv, 0);
     //converts the array to a string
