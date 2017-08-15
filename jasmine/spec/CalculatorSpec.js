@@ -13,4 +13,8 @@ describe("String Calculator",  function(){
   it("should return the number itself when a single number is passed", function(){
     expect(calculator.add('1')).toEqual(1);
   });
+
+  it("should return the sum of the numbers if two are given", function(){
+    expect(calculator.add('1,2')).toEqual(3);
+  });
 });
