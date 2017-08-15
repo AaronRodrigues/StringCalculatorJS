@@ -30,5 +30,9 @@ describe("String Calculator",  function(){
     // converts the array to a string
     arg = res.join();
     expect(calculator.add(arg)).toEqual(sum);
-  })
+  });
+
+  it("should allow \\n in between the input number string", function(){
+    expect(calculator.add("1\n2,3")).toEqual(6);
+  });
 });
