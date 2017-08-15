@@ -17,4 +17,16 @@ describe("String Calculator",  function(){
   it("should return the sum of the numbers if two are given", function(){
     expect(calculator.add('1,2')).toEqual(3);
   });
+
+  it("should return the sum of an unknown amount of numbers", function(){
+    // creates a random array
+    randomArray = (length, max) => [...new Array(length)]
+    .map(() => Math.round(Math.random() * max));
+    res = randomArray(10,9);
+    //sums up an array
+    sum = res.reduce((pv, cv) => pv+cv, 0);
+    //converts the array to a string
+    arg = res.join();
+    expect(calculator.add(arg)).toEqual(sum);
+  })
 });
