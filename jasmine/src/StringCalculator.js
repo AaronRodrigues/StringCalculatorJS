@@ -2,6 +2,9 @@ function StringCalculator(){
 }
 StringCalculator.prototype.add = function(string_numbers) {
   this.number = string_numbers;
+  if (this.number.includes('-')) {
+    throw new Error('negatives not allowed');
+  }
   // replaces \n with ,
   numbers = this.number.replace(/(\r\n|\n|\r)/gm,",");
   if (numbers == '') {

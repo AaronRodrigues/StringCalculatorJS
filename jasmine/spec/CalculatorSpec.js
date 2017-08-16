@@ -35,4 +35,8 @@ describe("String Calculator",  function(){
   it("should allow \\n in between the input number string", function(){
     expect(calculator.add("1\n2,3")).toEqual(6);
   });
+
+  it("should not allow negative numbers", function(){
+    expect( function(){ calculator.add("-1,2,3"); } ).toThrow(new Error("negatives not allowed"));
+  });
 });
